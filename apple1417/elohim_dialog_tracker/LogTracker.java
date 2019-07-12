@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LogTracker {
-    private static int threadAmount = 0;
+    private static int tailerAmount = 0;
 
     private List<DialogLine> dialogList;
     public LogTracker(List<DialogLine> dialogList, File logFile) {
@@ -27,7 +27,7 @@ public class LogTracker {
     public void updateLogFile(File logFile) {
         try {
             FileTailer newTailer = new FileTailer(
-                "Log Scanner " + Integer.toString(++threadAmount),
+                "Log Scanner " + Integer.toString(++tailerAmount),
                 logFile,
                 (str) -> consumeLine(str)
             );
@@ -78,9 +78,21 @@ public class LogTracker {
         } catch (StringIndexOutOfBoundsException e) {}
     }
 
+    /*
+      Dialog 63-1 is awarded close enough to a purple that it's line is written first, but it
+       doesn't actually get saved
+      Because of this we just have a quick workaround that only saves it on the second save.
+    */
+    private boolean seenDialog63_1 = false;
     private void saveAll() {
         for (DialogLine item : dialogList) {
             if (item.getRawState() == DialogState.NOT_SAVED) {
+                if (item.getDialog().equals("Elohim-063_Nexus_Ascent_01")) {
+                    seenDialog63_1 = !seenDialog63_1;
+                    if (seenDialog63_1) {
+                        continue;
+                    }
+                }
                 item.setRawState(DialogState.COLLECTED);
             }
         }
@@ -89,8 +101,15 @@ public class LogTracker {
     private void resetUnsaved() {
         for (DialogLine item : dialogList) {
             if (item.getRawState() == DialogState.NOT_SAVED) {
+                if (item.getDialog().equals("Elohim-063_Nexus_Ascent_01")) {
+                    seenDialog63_1 = false;
+                }
                 item.setRawState(DialogState.UNCOLLECTED);
             }
         }
+    }
+
+    public void resetAll() {
+        dialogList.forEach((item) -> item.setRawState(DialogState.UNCOLLECTED));
     }
 }
