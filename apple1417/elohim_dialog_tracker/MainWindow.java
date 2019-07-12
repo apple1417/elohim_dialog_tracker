@@ -13,6 +13,8 @@ import java.io.File;
 import javafx.geometry.Pos;
 
 public class MainWindow extends Application {
+    public static final String version = "v1.1";
+
     public static void main(String[] args) {
         launch();
     }
@@ -76,7 +78,7 @@ public class MainWindow extends Application {
         });
 
         mainStage.setScene(new Scene(root, 800, 800));
-        mainStage.setTitle("Elohim Dialog Tracker");
+        mainStage.setTitle("Elohim Dialog Tracker " + version);
         mainStage.setMinWidth(500);
         mainStage.setMinHeight(500);
         mainStage.show();
