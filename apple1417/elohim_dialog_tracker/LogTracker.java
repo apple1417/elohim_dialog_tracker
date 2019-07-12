@@ -45,7 +45,9 @@ public class LogTracker {
     public void consumeLine(String line) {
         try {
             // Start with the shortest substring so that a single index out of bounds applies to all
-            if (line.substring(16, 31).equals("Elohim speaks: ")) {
+            if (line.substring(16, 29).equals("Changing to '")) {
+                saveAll();
+            } else if (line.substring(16, 31).equals("Elohim speaks: ")) {
                 String dialog = line.substring(31, line.length() - 2);
                 boolean foundDialog = false;
                 for (DialogLine item : dialogList) {
@@ -69,19 +71,26 @@ public class LogTracker {
                     System.err.println("Couldn't match dialog '" + dialog + "'");
                 }
             } else if (line.substring(16, 39).equals("Started simulation on '")) {
-                for (DialogLine item : dialogList) {
-                    if (item.getRawState() == DialogState.NOT_SAVED) {
-                        item.setRawState(DialogState.UNCOLLECTED);
-                    }
-                }
+                resetUnsaved();
             } else if (line.substring(16, 47).equals("Player profile saved with size ")) {
-                for (DialogLine item : dialogList) {
-                    if (item.getRawState() == DialogState.NOT_SAVED) {
-                        item.setRawState(DialogState.COLLECTED);
-                    }
-                }
+                saveAll();
             }
         } catch (StringIndexOutOfBoundsException e) {}
     }
 
+    private void saveAll() {
+        for (DialogLine item : dialogList) {
+            if (item.getRawState() == DialogState.NOT_SAVED) {
+                item.setRawState(DialogState.COLLECTED);
+            }
+        }
+    }
+
+    private void resetUnsaved() {
+        for (DialogLine item : dialogList) {
+            if (item.getRawState() == DialogState.NOT_SAVED) {
+                item.setRawState(DialogState.UNCOLLECTED);
+            }
+        }
+    }
 }
