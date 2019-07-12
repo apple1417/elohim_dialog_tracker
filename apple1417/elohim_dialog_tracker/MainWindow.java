@@ -1,16 +1,16 @@
 package apple1417.elohim_dialog_tracker;
 
+import java.io.File;
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.stage.FileChooser;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.Scene;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import java.io.File;
-import javafx.geometry.Pos;
 
 public class MainWindow extends Application {
     public static final String version = "v1.1";

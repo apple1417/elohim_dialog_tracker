@@ -1,13 +1,12 @@
 package apple1417.elohim_dialog_tracker;
 
-import java.io.InputStream;
 import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.IOException;
 import java.lang.StringBuilder;
 import java.util.ArrayList;
-
-import java.io.File;
-import java.io.FileInputStream;
 
 public class CSVParser{
     private static final int SEPERATOR = ',';

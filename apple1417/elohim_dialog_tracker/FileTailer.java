@@ -1,15 +1,15 @@
 package apple1417.elohim_dialog_tracker;
 
-import java.util.List;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.util.Scanner;
-import java.util.function.Consumer;
 import java.io.File;
 import java.io.IOException;
-import java.nio.channels.FileChannel;
 import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 import java.nio.CharBuffer;
-import java.io.ByteArrayOutputStream;
+import java.util.function.Consumer;
+import java.util.List;
+import java.util.Scanner;
 
 /*
   Reads the tail of a file and when it updates sends new lines to the lineConsumer
@@ -77,7 +77,7 @@ public class FileTailer extends Thread {
                         }
 
                         output.write(character);
-                        
+
                         if (character == '\n') {
                             lineConsumer.accept(output.toString("UTF-8"));
                             output = new ByteArrayOutputStream();

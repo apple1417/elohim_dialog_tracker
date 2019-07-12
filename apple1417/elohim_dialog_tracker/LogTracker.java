@@ -1,12 +1,12 @@
 package apple1417.elohim_dialog_tracker;
 
-import java.util.List;
 import java.io.File;
-import java.util.Scanner;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+import java.util.List;
+import java.util.Scanner;
 
 public class LogTracker {
     private static int threadAmount = 0;

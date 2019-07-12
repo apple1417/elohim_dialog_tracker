@@ -1,15 +1,15 @@
 package apple1417.elohim_dialog_tracker;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import javafx.collections.ObservableList;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Control;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import java.io.IOException;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.Control;
-import java.util.ArrayList;
-import javafx.collections.ObservableList;
 
 public class DialogDisplay extends TableView<DialogLine> {
     private static final String[] allHeaders = new String[] {
