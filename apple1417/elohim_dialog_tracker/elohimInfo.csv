@@ -1,6 +1,4 @@
-"A1
-OR Demo",Elohim-001_Behold_child,"Detector at start of A1
-OR Collecting your first red tetro in Demo"
+A1,Elohim-001_Behold_child,Detector at start of A1
 A1,Elohim-002_All_across_this_land,Detector at end of tutorial area (before middle of A1)
 A1,Elohim-004_The_shapes_you_are,Collecting a tetro before opening the gate and having one of the gate sigils
 A1,Elohim-005_Well_done_child_only,Collecting a tetro before opening the gate and having two of the gate sigils
@@ -14,9 +12,7 @@ OR collecting a sigil after opening the gate and having exactly 3 DJs, 1 DZ, 2 y
 A1,Elohim-012_Step_into_the_light,Detector near exit
 A4,Elohim-053_Behold_I_am_Elohim,Glitchstorm detector +2s
 A4,Elohim-054_Excess_data_cleared,"Glitchstorm detector +MIN(last dialog finish +2.25s, 24.25s)"
-"Any Cloud Level
-OR Demo",Elohim-016_These_worlds_and_we,"On level change, when having 15 DMN tetros
-OR Collecting your third red tetro then getting the spawn checkpoint in Demo"
+Any Cloud Level,Elohim-016_These_worlds_and_we,"On level change, when having 15 DMN tetros"
 Any Cloud Level,Elohim-017_Long_ago_I_shaped,"On level change, when having 21 DMN tetros"
 Any Cloud Level,Elohim-018_I_have_promised,"On level change, when having 28 DMN tetros"
 Any Cloud Level,Elohim-019_I_see_all,"On level change, when having 35 DMN tetros"
@@ -43,9 +39,7 @@ Any Main Game,Elohim-074_You_have_done_well,Terminal halt event 3
 Any Main Game,Elohim-075_Look_within_you,Terminal halt event 4
 Any Main Game,Elohim-076_Have_faith,Terminal halt event 5
 Any Main Game,Elohim-077_You_have_already_chosen,Terminal halt event 6
-"Any Main Game
-OR Demo",Elohim-078_Do_not_think,"Terminal halt event 7
-OR Talking to milton in Demo to set flag ""MiltonDemo_DONE"", then exiting terminal +3s"
+Any Main Game,Elohim-078_Do_not_think,Terminal halt event 7
 Any?,Elohim-041_My_child_there_is_no_shame,"MAX(10m, 2* average puzzle time) after entering a puzzle"
 Any?,Elohim-042_If_the_answer_does_not_come_to_you,"MAX(10m, 2* average puzzle time)*2 after entering a puzzle"
 Any?,Elohim-043_When_the_truth,"MAX(10m, 2* average puzzle time)*3 after entering a puzzle"
@@ -53,11 +47,6 @@ Any?,Elohim-044_If_this_trial_seems,"MAX(10m, 2* average puzzle time)*4 after en
 B1,Elohim-050_Cease,Collecting Road of Death then hitting detector +6s
 B1,Elohim-051_In_the_time_of_your_ancestors,Collecting Road of Death then hitting detector +9.5s
 B4,Elohim-055_What_is_this,Entering ABUH +4s
-Demo Lobby,Elohim-DemoEnding,Start DemoSecretLevel chapter (return from secret level) +5s
-Gehenna Intro,DLC_Gehenna_Elohim-001_Uriel_awaken,After skipping first cutscene
-Gehenna Intro,"DLC_Gehenna_Elohim-002-007
-DLC_Gehenna_Elohim-002_Hear_me","Complicated loop that is essentially just a delay after the previous dialog
-Can trigger early causing it not to play if you run out of spawn too quickly"
 Nexus,Elohim-013_You_walk_now_upon,Detector right after leaving A1
 Nexus,Elohim-027_There_is_much_that_you_may,"""UnlockingAnimFinished"" event on connector +2s"
 Nexus,Elohim-028_You_have_come_far,"""UnlockingAnimFinished"" event on platform +2s"
@@ -72,10 +61,13 @@ Nexus,Elohim-045_There_are_mysteries,Detectors near star-locked doors
 Nexus,Elohim-056_Cannot_detect_location,Main elevator starts moving from floor 0
 Nexus,Elohim-057_Tracking_of_primary_subject,"After dialog 56, return to cloud world then when main elevator starts moving from floor 0 again"
 Nexus,Elohim-058_Attempting_to_track,"After dialog 57, return to cloud world then when main elevator starts moving from floor 0 again"
-Nexus,Elohim-059_My_child_have_you_been,Detector after leaving main elevator after arriving at floor 0 when having unlocked floor 1
-Nexus,Elohim-060B_Where_have_you_been,"Detector after leaving main elevator after arriving at floor 0 when (having unlocked no floors OR unlocked floors and all floor related dialogs (62, 61, or 59) already played)"
-Nexus,Elohim-061_My_child_you_may_go_freely,Detector after leaving main elevator after arriving at floor 0 when having unlocked floor 2
-Nexus,Elohim-062_Listen_to_me_well,Detector after leaving main elevator after arriving at floor 0 when having unlocked floor 3
+Nexus,Elohim-059_My_child_have_you_been,"Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 1
+Note that the unlocked flag isn't saved immediately, if you loose it just open the puzzle, pick up a sigil and re-place it"
+Nexus,Elohim-060B_Where_have_you_been,"Detector after leaving floor 0 building after arriving at floor 0 when (having unlocked no floors OR unlocked floors and all floor related dialogs (62, 61, or 59) already played)"
+Nexus,Elohim-061_My_child_you_may_go_freely,"Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 2
+Note that the unlocked flag isn't saved immediately, if you loose it just open the puzzle, pick up a sigil and re-place it"
+Nexus,Elohim-062_Listen_to_me_well,"Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 3
+Note that the unlocked flag isn't saved immediately, if you loose it just open the puzzle, pick up a sigil and re-place it"
 Nexus,Elohim-063_Nexus_Ascent_01,Dectector 1 during staircase to boss puzzle
 Nexus,Elohim-063_Nexus_Ascent_02,Dectector 2 during staircase to boss puzzle
 Nexus,Elohim-063_Nexus_Ascent_03,Dectector 3 during staircase to boss puzzle
@@ -92,7 +84,7 @@ Nexus,Elohim-063_Nexus_Ascent_07d_As_long_as_the_process,"Pressing third boss pu
 Sets flag ""Boss_RespawnVO4"""
 Nexus,Elohim-063_Nexus_Ascent_07e_This_world_may_be,"Pressing fourth boss puzzle elevator switch
 Sets flag ""Boss_RespawnVO5"""
-Nexus,Elohim-063_Nexus_Ascent_07f_In_this_world.,Pressing fifth boss puzzle elevator switch
+Nexus,Elohim-063_Nexus_Ascent_07f_In_this_world,Pressing fifth boss puzzle elevator switch
 Nexus,Elohim-063_Nexus_Ascent_07g_There_is_still,"Starting boss puzzle chapter when having flag ""Boss_RespawnVO1"""
 Nexus,Elohim-063_Nexus_Ascent_07h_All_this_suffering,"Starting boss puzzle chapter when having flag ""Boss_RespawnVO2"""
 Nexus,Elohim-063_Nexus_Ascent_07i_If_you_go_back,"Starting boss puzzle chapter when having flag ""Boss_RespawnVO3"""
@@ -101,7 +93,7 @@ Nexus,Elohim-063_Nexus_Ascent_07k_I_know_you_seek,"Starting boss puzzle chapter 
 Nexus,Elohim-063_Nexus_Ascent_08,Reciver for final fan to trancendence starts charging
 Nexus,Elohim-063_Nexus_Ascent_09,Terminal halt event 1 on trancendence terminal
 Nexus,Elohim-064_You_were_deceived,"Dectector 5 during staircase to boss puzzle, when having flag ""NihilistFlag"""
-Nexus,Elohim-065_You_were_always_meant,Detector in trancendence ending
+Nexus,Elohim-065_You_were_always_meant,Detector ontop of fan to trancendence ending
 Nexus,Elohim-066_My_beloved_child,Detector on F6
 Nexus,Elohim-069_And_so_it_is_done,"On level change, when having 90 DMN tetros"
 Nexus,Elohim-070_Come_forward,"Detector in front of gates of eternity, when they are open"
