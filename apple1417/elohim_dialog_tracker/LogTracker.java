@@ -57,7 +57,7 @@ public class LogTracker {
                     */
                     String[] allOptions = item.getDialog().split("\n");
                     for (String option : allOptions) {
-                        if (option.equals(dialog)) {
+                        if (option.equals(dialog) && item.getRawState() == DialogState.UNCOLLECTED) {
                             item.setRawState(DialogState.NOT_SAVED);
                             foundDialog = true;
                             break;
