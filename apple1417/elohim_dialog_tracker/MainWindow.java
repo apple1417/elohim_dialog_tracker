@@ -35,6 +35,7 @@ public class MainWindow extends Application {
 
         TextField logLocation = new TextField();
         logLocation.setEditable(false);
+        logLocation.setStyle("-fx-control-inner-background: #F4C7C3;");
         logLocation.prefWidthProperty().bind(logChooser.widthProperty().subtract(logButton.widthProperty()));
 
         logChooser.getChildren().add(logLocation);
@@ -82,6 +83,7 @@ public class MainWindow extends Application {
             File logFile = chooser.showOpenDialog(mainStage);
             if (logFile != null) {
                 logLocation.setText(logFile.getPath());
+                logLocation.setStyle(null);
                 tracker.updateLogFile(logFile);
             }
         });
