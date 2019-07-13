@@ -28,6 +28,12 @@ public class DialogGridCell extends Region implements Comparable<DialogGridCell>
         line.StateProperty().addListener((v, oldVal, newVal) -> {
             setStyle("-fx-background-color: " + line.getRawState().getColour());
         });
+
+        setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                line.setRawState(line.getRawState().next());
+            }
+        });
     }
 
     public DialogLine getLine() {
