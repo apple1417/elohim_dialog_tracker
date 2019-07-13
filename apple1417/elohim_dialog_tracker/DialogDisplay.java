@@ -66,7 +66,7 @@ public class DialogDisplay extends TableView<DialogLine> {
             CSVParser csv = new CSVParser(getClass().getResourceAsStream("elohimInfo.csv"));
             while (!csv.isClosed()) {
                 ArrayList<String> row = csv.nextRow();
-                DialogLine line = new DialogLine(row.get(0), row.get(1), row.get(2));
+                DialogLine line = new DialogLine(row.get(0), row.get(1), row.get(2), row.get(3));
                 line.StateProperty().addListener((v, oldVal, newVal) -> {
                     if (oldVal.equals(newVal)) {
                         return;

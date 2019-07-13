@@ -12,18 +12,20 @@ public class DialogLine {
 
     private final String level;
     private final String dialog;
+    private final String shortName;
     private final String trigger;
 
-    public DialogLine(DialogState state, String level, String dialog, String trigger) {
+    public DialogLine(DialogState state, String level, String dialog, String shortName, String trigger) {
         this.rawState = state;
         this.level = level;
         this.dialog = dialog;
+        this.shortName = shortName;
         this.trigger = trigger;
 
         this.state = new SimpleStringProperty(state.toString());
     }
-    public DialogLine(String level, String dialog, String trigger) {
-        this(DialogState.UNCOLLECTED, level, dialog, trigger);
+    public DialogLine(String level, String dialog, String shortName, String trigger) {
+        this(DialogState.UNCOLLECTED, level, dialog, shortName, trigger);
     }
 
     public void setRawState(DialogState state) {
@@ -42,6 +44,9 @@ public class DialogLine {
     }
     public String getDialog() {
         return dialog;
+    }
+    public String getShortName() {
+        return shortName;
     }
     public String getTrigger() {
         return trigger;
