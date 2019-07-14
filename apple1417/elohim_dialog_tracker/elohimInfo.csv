@@ -65,8 +65,8 @@ Nexus,Elohim-057_Tracking_of_primary_subject,57,"After dialog 56, return to clou
 Nexus,Elohim-066_My_beloved_child,66,Detector on F6
 Nexus,Elohim-058_Attempting_to_track,58,"After dialog 57, return to cloud world then when main elevator starts moving from floor 0 again"
 Any Island Level,Elohim-067_It_is_now_time,67,"Entering level +2s, when having flag ""MessengerEnding"""
-Nexus,Elohim-062_Listen_to_me_well,52,Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 3
-Nexus,Elohim-061_My_child_you_may_go_freely,51,Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 2
+Nexus,Elohim-062_Listen_to_me_well,62,Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 3
+Nexus,Elohim-061_My_child_you_may_go_freely,61,Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 2
 Nexus,Elohim-059_My_child_have_you_been,59,Detector after leaving floor 0 building after arriving at floor 0 when having unlocked floor 1
 Nexus,Elohim-063_Nexus_Ascent_01,63-1,Dectector 1 during staircase to boss puzzle
 Nexus,Elohim-063_Nexus_Ascent_02,63-2,Dectector 2 during staircase to boss puzzle

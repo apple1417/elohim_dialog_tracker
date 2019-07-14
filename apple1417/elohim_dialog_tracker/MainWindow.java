@@ -18,7 +18,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class MainWindow extends Application {
-    public static final String version = "v1.2";
+    public static final String version = "v1.3";
 
     public static void main(String[] args) {
         launch();
